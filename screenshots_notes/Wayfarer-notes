@@ -1,0 +1,30 @@
+pages: 
+	HomePage
+		- Nav
+			- Routes
+		- HomeContainer
+			 - Signup.js
+			 - CityCards.js
+		          - City.js
+		- DummySection
+		- Signup
+		- Footer
+
+BlogPage
+	- Nav
+		- Routes
+	- SelectedCityHolder
+	- CityCards.js
+		- City.js	
+	- BlogPostsHolder
+		- BlogPostCard
+	- CreateBlogPostForm
+	- footer
+
+
+Other logic:
+
+CityContainer - will handle 'city' state
+
+Config:
+		Routes - '/', '/cities'
