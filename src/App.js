@@ -1,23 +1,21 @@
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+import Routes from './config/routes';
+import Navbar from './components/Navbar';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+       <Routes />
+      
     </div>
+    
   );
 }
 
-export default App;
+
+export default withRouter(App);
+
