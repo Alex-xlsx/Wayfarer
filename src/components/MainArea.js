@@ -1,10 +1,13 @@
 import React from 'react';
+import CityCards from './CityCards';
 
-function MainArea() {
+function MainArea(props) {
     return (
       <div className="signup_form">
         <img src="" alt="Sign Up Form "/>
-        { routes }
+        <img src="" alt="Sign Up Form "/>
+        {/* <div></div> To Do: rotating image */}
+        <CityCards cities={props.cities}/>
       </div>
     );
   };
