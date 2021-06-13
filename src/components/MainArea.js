@@ -3,12 +3,21 @@ import CityCards from './CityCards';
 
 function MainArea(props) {
     return (
-      <div className="signup_form">
-        <img src="" alt="Sign Up Form "/>
-        <img src="" alt="Sign Up Form "/>
-        {/* <div></div> To Do: rotating image */}
+      <main>
+        <h1>Wayfarer</h1>
+        <div className="home-section-1">
+          <form>
+            <h3>Sign Up</h3>
+            <input type="text" placeholder="Name..."></input>
+            <input type="text" placeholder="Email..."></input>
+            <button>Submit</button>
+          </form>
+          <div className="dummy-carousel">
+            <img src='https://picsum.photos/id/10/200/300'></img>
+          </div>
+        </div>
         <CityCards cities={props.cities}/>
-      </div>
+      </main>
     );
   };
 

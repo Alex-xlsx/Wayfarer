@@ -2,15 +2,24 @@ import { NavLink } from 'react-router-dom';
 
 function NavBar(props) {
   return (
-      <container>
+      <nav>
+        <div className="links">
           <NavLink className="nav-link" exact to='/'>
             Home
           </NavLink>
 
           <NavLink className="nav-link" to='/posts'>
-           Blog
+            Blog
           </NavLink>
-      </container>
+        </div>
+        <div className="nav-dummy">
+          <p class="fa fa-facebook"></p>
+          <p class="fa fa-instagram"></p>
+          <p class="fa fa-twitter"></p>
+          <p class="fa fa-github"></p>
+          <input type="text" placeholder="search..."></input>
+        </div>
+      </nav>
   );
 }
 
