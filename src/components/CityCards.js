@@ -12,7 +12,7 @@ function CityCards(props) {
     })
 
     return (
-        <ul>
+        <ul className="city-card-main">
             {cities}
         </ul>
     )
