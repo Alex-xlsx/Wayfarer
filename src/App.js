@@ -5,6 +5,8 @@ import Routes from './config/routes';
 // import CityCards from './components/CityCards';
 import HomePage from './pages/HomePage';
 import './App.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 function App() {
