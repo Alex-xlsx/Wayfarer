@@ -47,10 +47,10 @@ class BlogPostContainer extends Component {
     render() {
         console.log('cityId in BlogPostContainer', this.props.cityId)
         return(
-            <>
+            <main>
                 <CityInfo />
                 <CreatePost cityId={this.props.cityId} createBlogPost={this.createBlogPost}/>
-            </>
+            </main>
         )
     }
 }

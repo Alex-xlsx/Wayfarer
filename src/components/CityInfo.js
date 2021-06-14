@@ -1,12 +1,12 @@
 function CityInfo(props) {
     return(
-        <div class="city-info">
+        <div className="city-info row">
             {/* <img src={props.city.image} alt=""></img> */}
             <img src={props.city.image} alt="" width="500" height="350"></img>
-            <p>{}</p>
-            <form method="GET" action="/">
+            <div className="city-info-card"> 
+                <p>{}</p>
                 <button type="submit" value="/">Make Post</button>
-            </form>
+            </div>    
         </div>
     );
 }
