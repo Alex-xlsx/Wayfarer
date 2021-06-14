@@ -7,8 +7,8 @@ function Routes(props) {
   return (
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route path='/cities' component={BlogPage} />
-      <Route path='/cities/:id' component={BlogPage} />
+      <Route exact path='/cities' component={BlogPage} />
+      <Route path='/cities/:cityId' component={BlogPage} />
     </Switch>
   );
 }

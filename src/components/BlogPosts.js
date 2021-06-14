@@ -1,28 +1,28 @@
-// import React from 'react';
-// import Blogpost from './Blogpost'
+import React from 'react';
+import Blogpost from './Blogpost'
 
-// class Blogposts extends Component {
+class Blogposts extends React.Component {
 
-//   render() {
-//     let blogposts = this.props.blogposts.map((blogpost) => {
-//       return <BlogPost 
-//       key={blogpost._id}
-//       blogpost={blogpost}
-//       onDeleteBlogPost={this.props.onDeleteBlogPost}
-//       onUpdateBlogPost={this.props.onUpdateBlogPost}
-//       />
+  render() {
+    let blogposts = this.props.blogposts.map((blogpost) => {
+      return <BlogPost 
+        key={blogpost._id}
+        blogpost={blogpost}
+        onDeleteBlogPost={this.props.onDeleteBlogPost}
+        onUpdateBlogPost={this.props.onUpdateBlogPost}
+      />
     
-//     })
+    })
     
-//     return ( 
-//     <ul>
-//       {blogposts}
+    return ( 
+    <ul>
+      {blogposts}
 
-//     </ul>
-//     )
-//   }
-// }
+    </ul>
+    )
+  }
+}
   
 
 
-//   export default BlogPosts;
+  export default BlogPosts;
