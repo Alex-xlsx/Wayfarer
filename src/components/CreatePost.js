@@ -28,21 +28,23 @@ class CreatePost extends Component {
 
   render(){
     return (
-        <form onSubmit={ this.onFormSubmit } id="postForm">
-          <input onChange={this.onInputChange}
+        <form onSubmit={ this.onFormSubmit } id="postForm" className="row">
+          <div className="column post-box">
+            <input onChange={this.onInputChange}
             type="text"
+            placeholder="Post title..."
             value={this.state.title}
             name="title"
-          />
-          <textarea  
-            onChange={ this.onInputChange } 
-            type="text" id="blogContent" 
-            placeholder="Make a blog post..." 
-            value={this.state.content}
-            name="content"
-            rows="10" cols="80"
-          ></textarea>
-          <button type="submit" id="addPost" className="btn">Add Post</button>
+            />
+            <textarea  
+              onChange={ this.onInputChange } 
+              type="text" id="blogContent" 
+              placeholder="Make a blog post..." 
+              value={this.state.content}
+              name="content"
+            ></textarea>
+          </div>
+            <button type="submit" id="addPost" className="btn">Add Post</button>
         </form>
     )
   }
