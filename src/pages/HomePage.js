@@ -1,12 +1,12 @@
 import React from 'react';
-import MainArea from '../components/MainArea';
 import DummyBlock from '../components/DummyBlock';
+import CityContainer from '../containers/CityContainer';
 
 
 function HomePage(props) {
     return(
         <>
-            <MainArea cities={props.cities}/>
+            <CityContainer cities={props.cities}/>
             <DummyBlock />
         </>
     );

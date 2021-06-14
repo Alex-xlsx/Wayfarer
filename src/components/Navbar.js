@@ -8,7 +8,7 @@ function NavBar(props) {
             Home
           </NavLink>
 
-          <NavLink className="nav-link" to='/posts'>
+          <NavLink className="nav-link" to='/cities'>
             Blog
           </NavLink>
         </div>

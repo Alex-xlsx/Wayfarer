@@ -1,12 +1,18 @@
 import React from 'react';
-import CityInfo from '../components/CityInfo';
+import { useParams } from "react-router";
+import BlogPostContainer from '../containers/BlogPostContainer';
+
 
 function BlogPage(props) {
-    return(
-        <>        
-            <CityInfo />           
-        </>
-    );
+    let cityId = useParams();
+    if(cityId) {
+        console.log('cityId in BlogPage', cityId)
+        return(
+            <>        
+                <BlogPostContainer cityId={cityId} />    
+            </>
+        );
+    }
 }
 
 export default BlogPage;
