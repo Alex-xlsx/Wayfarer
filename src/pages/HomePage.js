@@ -7,10 +7,8 @@ import Footer from '../components/Footer';
 function HomePage(props) {
     return(
         <>
-            <Navbar />
             <MainArea cities={props.cities}/>
             <DummyBlock />
-            <Footer />
         </>
     );
 }
