@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CityInfo from '../components/CityInfo';
+import AllCityCards from '../components/AllCityCards';
 import CreatePost from '../components/CreatePost';
 import BlogPostModel from '../models/BlogPostModel';
 import CityModel from '../models/CityModel';
@@ -48,6 +49,7 @@ class BlogPostContainer extends Component {
         console.log('cityId in BlogPostContainer', this.props.cityId)
         return(
             <main>
+                <AllCityCards cities={this.state.cities}/>
                 <CityInfo />
                 <CreatePost cityId={this.props.cityId} createBlogPost={this.createBlogPost}/>
             </main>
