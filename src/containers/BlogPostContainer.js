@@ -4,16 +4,18 @@ import AllCityCards from '../components/AllCityCards';
 import CreatePost from '../components/CreatePost';
 import BlogPostModel from '../models/BlogPostModel';
 import CityModel from '../models/CityModel';
-
+import BlogPosts from '../components/BlogPosts';
+import { Redirect } from 'react-router';
 class BlogPostContainer extends Component {
     state= {
-        title: '',
-        content: '',
-        city: '', 
+        // title: '',
+        // content: '',
+        // city: '', 
         name: '',
         image: '',
         posts: [],
         cities: [],
+        redirect: false,
     }
 
     componentDidMount() {
@@ -43,14 +45,26 @@ class BlogPostContainer extends Component {
 
     createBlogPost = (post) => {
         return BlogPostModel.createPost(post)
+        .then( () => {
+            this.setState ({
+                redirect: true
+            })
+        })
     }
 
     render() {
+        const { redirect } = this.state;
+
+        if (redirect) {
+            return <Redirect to = {`/cities/${this.props.cityId}`}/>;
+        }
+
         console.log('cityId in BlogPostContainer', this.props.cityId)
         return(
             <main>
+                <CityInfo image={this.state.image}/>
                 <AllCityCards cities={this.state.cities}/>
-                <CityInfo />
+                <BlogPosts blogposts={this.state.posts}/>
                 <CreatePost cityId={this.props.cityId} createBlogPost={this.createBlogPost}/>
             </main>
         )
