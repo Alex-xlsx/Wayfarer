@@ -29,10 +29,10 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <HomePage cities={cities}/>
-      {/* <Navbar />
-       <Routes />
-      <CityCards cities={cities}/> */}
+      {/* <BlogPage /> */}
+      <Footer />
     </div>
     
   );

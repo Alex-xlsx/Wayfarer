@@ -64,10 +64,11 @@ main{
 }
 
 h1{
-    margin: 20px 0 0 0;
-    font-size: 100px;
+    margin: 40px 0 -45px 0;
+    font-size: 120px;
     font-family: "Great Vibes";
     color: rgb(92, 80, 80);
+    z-index: 1;
 }
 h2{
     margin: 20px 0 0 0;
