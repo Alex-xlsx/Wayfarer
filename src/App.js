@@ -30,8 +30,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <HomePage cities={cities}/>
-      {/* <BlogPage /> */}
+      <Routes />
       <Footer />
     </div>
     
