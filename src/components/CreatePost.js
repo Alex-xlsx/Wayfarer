@@ -20,10 +20,15 @@ class CreatePost extends Component {
     console.log('blogPost in CreatePost', blogPost)
 
     this.props.createBlogPost(blogPost)
-    this.setState({
-      title: '',
-      content: '',
+    .then( () => {
+            this.setState({
+            title: '',
+            content: '',
+        })
+    }).catch((err) => {
+        console.err('Failed to post blog');
     })
+
   }
 
   render(){

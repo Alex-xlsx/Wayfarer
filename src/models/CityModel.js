@@ -5,6 +5,11 @@ class CityModel {
         return fetch(url)
             .then((res) => res.json())
     }
+
+    static getCity(cityId) {
+        return fetch(`${url}/${cityId}`)
+            .then((res) => res.json())
+    }
 }
 
 export default CityModel;
