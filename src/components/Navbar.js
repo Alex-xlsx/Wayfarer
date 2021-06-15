@@ -8,8 +8,10 @@ function NavBar(props) {
             Home
           </NavLink>
 
-          <NavLink className="nav-link" to='/cities'>
-            Blog
+          <NavLink className="nav-link" to="/" onClick={function scrollDown(){
+            document.getElementById('cities').scrollIntoView({behavior:"smooth"})
+            }} type="submit" value="/">
+              Blog
           </NavLink>
         </div>
         <div className="nav-dummy">
@@ -24,3 +26,7 @@ function NavBar(props) {
 }
 
 export default NavBar;
+
+<button onClick={function scrollDown(){
+                    document.getElementById('nav').scrollIntoView({behavior:"smooth"})
+            }} type="submit" value="/">Scroll to Top</button>
