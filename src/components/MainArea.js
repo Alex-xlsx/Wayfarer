@@ -11,10 +11,10 @@ function MainArea(props) {
         </div>
         <div className="home-section-1">
           <form>
-            <h3>Sign Up</h3>
+            <h3>Get exclusive travel tips, giveaways, and more!</h3>
             <input type="text" placeholder="Name..."></input>
             <input type="text" placeholder="Email..."></input>
-            <button>Submit</button>
+            <button>SIGN UP</button>
           </form>
           <div className="dummy-carousel">
             <img src='https://images.unsplash.com/photo-1534430224470-f52e596ced9f?ixid=MnwxMjA3fDB8MHxzZWFy[…]ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' width="200" height="300"></img>
