@@ -3,7 +3,9 @@ var moment = require('moment');
 
 class BlogPost extends React.Component {
     state = {
-        isEditClicked: false
+        isEditClicked: false,
+        title: '',
+        content: '',
     }
 
     deleteClickedPost = (event) => {
@@ -17,23 +19,46 @@ class BlogPost extends React.Component {
         console.log('Update BlogPostContainer state');
     }
 
+    // handleCancelClick = (event) => {
+    //     this.setState({
+    //         isEditClicked: false
+    //     })
+    // }
+
+    // handleEditPost = () => {
+
+    // }
+
+    // onInputChange = (event) => {
+    //     this.setState({
+    //         [event.target.name]: event.target.value
+    //     })
+    // }
+
     render() {
         let momentDate = moment(this.props.blogpost.createdAt);
         let relativeDate = momentDate.fromNow();
 
-        if(this.state.isEditClicked) {
-            return (
-                <form>
-                    <input type="text" value={this.props.blogpost.title} name="title"/>
-                    <textarea  
-                        onChange={ this.onInputChange } 
-                        type="text" id="blogContent" 
-                        value={this.props.blogpost.content}
-                        name="content"
-                    ></textarea>
-                </form>
-            )
-        }
+        // if(this.state.isEditClicked) {
+        //     return (
+        //         <>
+        //             <form>
+        //                 <input type="text" value={this.props.blogpost.title} name="title"/>
+        //                 <textarea  
+        //                     onChange={ this.onInputChange } 
+        //                     type="text" id="blogContent" 
+        //                     value={this.props.blogpost.content}
+        //                     name="content"
+        //                 ></textarea>
+        //             </form>
+        //             <div className="column blog-buttons">
+        //                 <label htmlFor="">Date: {relativeDate}</label>
+        //                 <button onClick={this.handleCancelClick}>Cancel</button>
+        //                 <button onClick={this.handleEditPost}>Submit</button>
+        //             </div>
+        //         </>
+        //     )
+        // }
         return(
             <div className="blog-box row">
                 <div className="column blog-text">
