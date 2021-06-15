@@ -18,6 +18,13 @@ class BlogPostContainer extends Component {
         this.fetchCities();
     }
 
+    componentDidUpdate(prevProps) {
+        if(prevProps.cityId !== this.props.cityId) {
+            console.log('page changed');
+            this.fetchCurrentCity();
+        }
+    }
+
     fetchCities = () => {
         CityModel.all().then((res) => {
             console.log("Response from cities api: ", res);
