@@ -1,4 +1,4 @@
-const url = 'http://localhost:4000/api/v1/wayfarer/cities/';
+const url = 'http://localhost:4000/api/v1/wayfarer/cities';
 
 class CityModel {
     static all() {

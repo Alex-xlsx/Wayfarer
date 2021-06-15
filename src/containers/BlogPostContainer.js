@@ -5,17 +5,12 @@ import CreatePost from '../components/CreatePost';
 import BlogPostModel from '../models/BlogPostModel';
 import CityModel from '../models/CityModel';
 import BlogPosts from '../components/BlogPosts';
-import { Redirect } from 'react-router';
 class BlogPostContainer extends Component {
     state= {
-        // title: '',
-        // content: '',
-        // city: '', 
         name: '',
         image: '',
         posts: [],
-        cities: [],
-        redirect: false,
+        cities: []
     }
 
     componentDidMount() {
@@ -43,28 +38,33 @@ class BlogPostContainer extends Component {
         })
     }
 
-    createBlogPost = (post) => {
-        return BlogPostModel.createPost(post)
-        .then( () => {
-            this.setState ({
-                redirect: true
-            })
+    createBlogPost = async (post) => {
+        let newPost = await BlogPostModel.createPost(post);
+        let currentPosts = this.state.posts;
+        currentPosts.push(newPost);
+        this.setState({
+            posts: currentPosts,
+        });
+    }
+
+    deletePost = async (id) => {
+        let deletedPost = await BlogPostModel.deletePost(id);
+        console.log("Response from deletedPost api: ", deletedPost);
+        let updatedPosts = this.state.posts.filter((post) => {
+            return post._id !== deletedPost._id;
+        });
+        this.setState({
+            posts: updatedPosts
         })
     }
 
     render() {
-        const { redirect } = this.state;
-
-        if (redirect) {
-            return <Redirect to = {`/cities/${this.props.cityId}`}/>;
-        }
-
         console.log('cityId in BlogPostContainer', this.props.cityId)
         return(
             <main>
                 <CityInfo image={this.state.image}/>
                 <AllCityCards cities={this.state.cities}/>
-                <BlogPosts blogposts={this.state.posts}/>
+                <BlogPosts blogposts={this.state.posts} deletePost={this.deletePost}/>
                 <CreatePost cityId={this.props.cityId} createBlogPost={this.createBlogPost}/>
             </main>
         )
