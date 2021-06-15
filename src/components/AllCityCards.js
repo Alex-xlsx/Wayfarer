@@ -9,7 +9,7 @@ function AllCityCards(props) {
     })
 
     return (
-        <ul className="city-card-main">
+        <ul className="city-card-all">
             {cities}
         </ul>
     )

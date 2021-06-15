@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <footer>
+        <footer id="footer">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, eveniet aliquid! Autem perferendis facere obcaecati aspernatur, molestias iusto minima provident.</p>
         </footer>
     );
