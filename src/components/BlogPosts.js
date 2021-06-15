@@ -4,12 +4,15 @@ class BlogPosts extends React.Component {
 
   render() {
     let blogposts = this.props.blogposts.map((blogpost) => {
-      return <BlogPost 
+                  console.log('Blogpost in BlogPosts ===> ', blogpost);
+
+      return (
+    <BlogPost 
         key={blogpost._id}
         blogpost={blogpost}
-        // onDeleteBlogPost={this.props.onDeleteBlogPost}
+        deletePost={this.props.deletePost}
         // onUpdateBlogPost={this.props.onUpdateBlogPost}
-      />
+      />)
     
     })
     
