@@ -5,9 +5,12 @@ function CityInfo(props) {
             <img src={props.image} alt="" width="500" height="350"></img>
             <div className="city-info-card"> 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam odio placeat temporibus, sed repellendus repellat maxime tenetur mollitia laborum sequi!</p>
-                <button type="submit" value="/">Make Post</button>
+                <button onClick={function scrollDown(){
+                    document.getElementById('footer').scrollIntoView({behavior:"smooth"})
+                }} type="submit" value="/">Make Post</button>
             </div>    
         </div>
+        
     );
 }
 
