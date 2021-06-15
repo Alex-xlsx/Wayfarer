@@ -406,9 +406,17 @@ form button {
 .blog-text:hover{
     background:white;
 }
+.blog-title{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .blog-text h4{
     font-size: 26px;
+    margin-top: -5px;
     margin-bottom: 5px;
+}
+.date-text{
+    text-align: left;
 }
 .blog-text p{
     margin-bottom: 10px;
@@ -416,7 +424,6 @@ form button {
 .blog-buttons{
     width: 25%;
     max-height: 200px;
-    justify-content: space-between;
 }
 .blog-buttons button{
     width: 100%;
@@ -449,12 +456,18 @@ footer{
     background: #e4d3c6;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     padding: 25px;
     text-align: center;
 }
 footer p{
     width: 66%;
+    margin-bottom: 10px;
+}
+footer button{
+    width: 30%;
 }
 /* --------------------------------------FOOTER END */
 
