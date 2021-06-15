@@ -12,11 +12,13 @@ class BlogPost extends React.Component {
         return(
             <div className="blog-box row">
                 <div className="column blog-text">
-                    <h4>{this.props.blogpost.title}</h4>
+                    <div className="row blog-title">
+                        <h4>{this.props.blogpost.title}</h4>
+                        <label className="date-text" htmlFor="">Date: {relativeDate}</label>
+                    </div>
                     <p>{this.props.blogpost.content}</p>
                 </div>
                 <div className="column blog-buttons">
-                    <label htmlFor="">Date: {relativeDate}</label>
                     <button>Edit</button>
                     <button onClick={this.deleteClickedPost}>Delete</button>
                 </div>
