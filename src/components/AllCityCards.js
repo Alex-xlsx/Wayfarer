@@ -4,7 +4,7 @@ import City from './City';
 function AllCityCards(props) {
     let cities = props.cities.map((city) => {
         return(
-            <City key={city._id} city={city}/>
+            <City key={city._id} city={city} />
         )
     })
 
